@@ -3,7 +3,7 @@
   "version": "2.0.2",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:jianlin.zjl/ginit.git"
+    "url": "git@github.com:zhoujianlin8/ginit.git"
   },
   "description": "支持自定义template的脚手架初始化的模块",
   "main": "index.js",
