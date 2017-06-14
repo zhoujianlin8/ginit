@@ -1,6 +1,6 @@
 {
   "name": "ginit",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "repository": {
     "type": "git",
     "url": "git@gitlab.alibaba-inc.com:jianlin.zjl/ginit.git"

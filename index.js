@@ -381,21 +381,22 @@ function rewrite(args) {
     return lines.join('\n');
 }
 Ginit.rewrite = rewrite;
+
 Ginit.tnpmInstall = function(options,cb){
    var cb = cb || function(){};
     options = util._extend({
     cwd: process.cwd(),
     args: ['install'],
-    registry: 'http://registry.npm.alibaba-inc.com',
+    registry: 'https://registry.npm.taobao.org',
     stdio: 'inherit'
   }, options || {});
   var args = options.args.concat([]);
   args.unshift('--registry=' + options.registry);
   //tnpm
   var npm = 'npm';
-  var tnpmrc = path.join(userHome(),'.tnpmrc');
+  var tnpmrc = path.join(userHome(),'.cnpmrc');
   if(fs.existsSync(tnpmrc)){
-    npm = 'tnpm';
+    npm = 'cnpm';
     args.unshift('--userconfig='+tnpmrc);
   }
   var cli = spawn(npm, args, {
@@ -411,3 +412,4 @@ Ginit.tnpmInstall = function(options,cb){
     }
   });
 }
+Ginit.npmInstall  = Ginit.tnpmInstall;
